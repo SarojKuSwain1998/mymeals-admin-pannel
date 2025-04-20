@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const AddMealsForm = () => {
-  const [mealItems, setMealItems] = useState([""]); // Start with one item
+  const [mealItems, setMealItems] = useState([""]);
   const [plan, setPlan] = useState("");
 
   const handleMealChange = (index, value) => {
@@ -67,6 +67,20 @@ const AddMealsForm = () => {
         >
           + Add Item
         </button>
+      </div>
+      <h1>Prices and Quantity</h1>
+      <div>
+        <div>
+          <label htmlFor="plan" className="text-sm font-medium text-gray-700">
+            Price
+          </label>
+          <input
+            id="orderNo"
+            type="text"
+            placeholder="Enter your order number"
+            className="mt-1 block w-full border px-4 py-2 rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+          />
+        </div>
       </div>
     </section>
   );

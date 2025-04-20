@@ -1,6 +1,23 @@
 import { Button } from "@mui/material";
 import { ChevronDown, Menu } from "lucide-react";
 import { useRef, useState } from "react";
+const user = [
+  {
+    id: 1,
+    name: "John",
+    role: "Admin",
+  },
+  {
+    id: 2,
+    name: "Doe",
+    role: "User",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    role: "Delivery",
+  },
+];
 
 const Navbar = () => {
   const [profileDropdown, setProfileDropdown] = useState(false);
@@ -81,14 +98,16 @@ const Navbar = () => {
                 </li>
                 <hr className="my-2" />
                 <li>
-                  <Button
-                    variant="a"
-                    aria-label="Logout button"
-                    //   onClick={handleUserLogout}
-                    className="flex items-start px-4 py-2 text-base font-normal text-gray-700 shadow-none hover:bg-gray-100"
-                  >
-                    Logout
-                  </Button>
+                  <a href="/login" alt="Logout">
+                    <Button
+                      variant="a"
+                      aria-label="Logout button"
+                      //   onClick={handleUserLogout}
+                      className="flex items-start px-4 py-2 text-base font-normal text-gray-700 shadow-none hover:bg-gray-100"
+                    >
+                      Logout
+                    </Button>
+                  </a>
                 </li>
               </ul>
             </div>
