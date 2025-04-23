@@ -10,6 +10,7 @@ import HomePage from "./components/Pages/HomePage";
 import MealsPage from "./components/Pages/MealsPage";
 import AddMealsPage from "./components/Pages/AddMealsPage";
 import LoginPage from "./components/Pages/LoginPage";
+import ViewOrdersPage from "./components/Pages/ViewOrdersPage";
 
 function LayoutWithNavbar() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function LayoutWithNavbar() {
         <Route path="/users" element={<UsersPage />} />
         <Route path="/meals" element={<MealsPage />} />
         <Route path="/add-meals" element={<AddMealsPage />} />
+        <Route path="/orders" element={<ViewOrdersPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </>

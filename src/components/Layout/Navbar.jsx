@@ -192,6 +192,15 @@ const Navbar = () => {
               </div>
             )}
           </li>
+          <li>
+            <a
+              href="/orders"
+              alt="a to orders Page"
+              className="text-gray-200 hover:text-gray-50 hover:underline hover:underline-offset-8"
+            >
+              View-Orders
+            </a>
+          </li>
         </ul>
       </div>
     </header>
