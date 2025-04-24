@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { ChevronDown, Menu } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const user = [
   {
     id: 1,
@@ -22,20 +22,49 @@ const user = [
 const Navbar = () => {
   const [profileDropdown, setProfileDropdown] = useState(false);
   const [productsDropdown, setProductsDropdown] = useState(false);
-  const [featuresDropdown, setFeaturesDropdown] = useState(false);
-  const [ordersDropdown, setOrdersDropdown] = useState(false);
+  const [usersDropdown, setUsersDropdown] = useState(false);
+  const [deliveryDropdown, setDeliveryDropdown] = useState(false);
 
   const profileRef = useRef(null);
   const productsRef = useRef(null);
-  const featuresRef = useRef(null);
-  const ordersRef = useRef(null);
+  const usersRef = useRef(null);
+  const deliveryRef = useRef(null);
   const handleProductsDropdown = () => {
     setProductsDropdown(!productsDropdown);
   };
 
+  const handleUsersDropdown = () => {
+    setUsersDropdown(!usersDropdown);
+  };
+
+  const handleDeliveryDropdown = () => {
+    setDeliveryDropdown(!deliveryDropdown);
+  };
   const handleProfileToggle = () => {
     setProfileDropdown(!profileDropdown);
   };
+
+  const handleClickOutside = (event) => {
+    if (profileRef.current && !profileRef.current.contains(event.target)) {
+      setProfileDropdown(false);
+    }
+    if (productsRef.current && !productsRef.current.contains(event.target)) {
+      setProductsDropdown(false);
+    }
+    if (usersRef.current && !usersRef.current.contains(event.target)) {
+      setUsersDropdown(false);
+    }
+    if (deliveryRef.current && !deliveryRef.current.contains(event.target)) {
+      setDeliveryDropdown(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="h-auto w-full justify-between bg-slate-900 px-4 py-4 md:px-8 lg:px-40">
@@ -133,24 +162,6 @@ const Navbar = () => {
               Dashboard
             </a>
           </li>
-          <li>
-            <a
-              href="/users"
-              alt="a to Reports Page"
-              className="text-gray-200 hover:text-gray-50 hover:underline hover:underline-offset-8"
-            >
-              Users Reports
-            </a>
-          </li>
-          {/* <li>
-            <a
-              href="/meals"
-              alt="a to meals Page"
-              className="text-gray-200 hover:text-gray-50 hover:underline hover:underline-offset-8"
-            >
-              Meals
-            </a>
-          </li> */}
           <li className="relative" ref={productsRef}>
             <a
               href="#"
@@ -158,7 +169,7 @@ const Navbar = () => {
               onClick={handleProductsDropdown}
               className="flex items-center"
             >
-              Meals
+              Admin-Pannel
               <ChevronDown
                 className={
                   productsDropdown ? "-rotate-180 transition duration-300" : ""
@@ -168,6 +179,15 @@ const Navbar = () => {
             {productsDropdown && (
               <div className="absolute left-0 right-0 top-12 z-50 w-48 rounded-md bg-white shadow-md">
                 <ul className="p-2" id="dropdown-menu">
+                  <li>
+                    <a
+                      href="/users"
+                      alt="a to Reports Page"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      Users Reports
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="/meals"
@@ -188,18 +208,121 @@ const Navbar = () => {
                       Add Meals
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="/orders"
+                      alt="a to orders Page"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      View-Orders
+                    </a>
+                  </li>
                 </ul>
               </div>
             )}
           </li>
-          <li>
+
+          <li className="relative" ref={usersRef}>
             <a
-              href="/orders"
-              alt="a to orders Page"
-              className="text-gray-200 hover:text-gray-50 hover:underline hover:underline-offset-8"
+              href="#"
+              alt=""
+              onClick={handleUsersDropdown}
+              className="flex items-center"
             >
-              View-Orders
+              User-Pannel
+              <ChevronDown
+                className={
+                  usersDropdown ? "-rotate-180 transition duration-300" : ""
+                }
+              />
             </a>
+            {usersDropdown && (
+              <div className="absolute left-0 right-0 top-12 z-50 w-48 rounded-md bg-white shadow-md">
+                <ul className="p-2" id="dropdown-menu">
+                  <li>
+                    <a
+                      href="/user/user-register"
+                      alt="User Register"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleUsersDropdown}
+                    >
+                      User Register
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/user/schedule-meals"
+                      alt="Complaint Page"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleUsersDropdown}
+                    >
+                      Schedule-Meals
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/user/compaintpage"
+                      alt="Complaint Page"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleUsersDropdown}
+                    >
+                      Complaint-Form
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/user/delivery-tracking"
+                      alt="User Register"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleUsersDropdown}
+                    >
+                      Tracking-Delivery
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li className="relative" ref={deliveryRef}>
+            <a
+              href="#"
+              alt=""
+              onClick={handleDeliveryDropdown}
+              className="flex items-center"
+            >
+              Delivery-Pannel
+              <ChevronDown
+                className={
+                  deliveryDropdown ? "-rotate-180 transition duration-300" : ""
+                }
+              />
+            </a>
+            {deliveryDropdown && (
+              <div className="absolute left-0 right-0 top-12 z-50 w-48 rounded-md bg-white shadow-md">
+                <ul className="p-2" id="dropdown-menu">
+                  <li>
+                    <a
+                      href="/user/user-register"
+                      alt="User Register"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleDeliveryDropdown}
+                    >
+                      Assign-Orders
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/user/compaintpage"
+                      alt="Complaint Page"
+                      className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                      onClick={handleDeliveryDropdown}
+                    >
+                      Delivery-History
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
           </li>
         </ul>
       </div>
