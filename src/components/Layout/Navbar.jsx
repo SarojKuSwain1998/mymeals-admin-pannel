@@ -302,7 +302,7 @@ const Navbar = () => {
                 <ul className="p-2" id="dropdown-menu">
                   <li>
                     <a
-                      href="/user/user-register"
+                      href="/delivery/assign-orders"
                       alt="User Register"
                       className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
                       onClick={handleDeliveryDropdown}
@@ -312,7 +312,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
-                      href="/user/compaintpage"
+                      href="/delivery/delivery-history"
                       alt="Complaint Page"
                       className="block rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
                       onClick={handleDeliveryDropdown}

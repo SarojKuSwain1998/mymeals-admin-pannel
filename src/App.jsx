@@ -16,6 +16,8 @@ import UserRegister from "./components/Pages/Users/UserRegister";
 import ComplaintPage from "./components/Pages/Users/ComplaintPage";
 import Mealschedule from "./components/Pages/Users/Mealschedule";
 import DeliveryTracking from "./components/Pages/Users/DeliveryTracking";
+import AssignOrder from "./components/Pages/Delivery/AssignOrder";
+import DeliveryHistory from "./components/Pages/Delivery/DeliveryHistory";
 
 function LayoutWithNavbar() {
   const location = useLocation();
@@ -38,6 +40,11 @@ function LayoutWithNavbar() {
         <Route path="/user/schedule-meals" element={<Mealschedule />} />
         <Route path="/user/compaintpage" element={<ComplaintPage />} />
         <Route path="/user/delivery-tracking" element={<DeliveryTracking />} />
+        <Route path="/delivery/assign-orders" element={<AssignOrder />} />
+        <Route
+          path="/delivery/delivery-history"
+          element={<DeliveryHistory />}
+        />
       </Routes>
     </>
   );
