@@ -1,26 +1,38 @@
 import { useState } from "react";
 import Modal from "../Modal";
+import ViewIndivisualMeals from "./ViewIndivisualMeals";
 
 const MealsPage = () => {
+  const [isEdit, setIsEdit] = useState(false);
+
   const [meals, setMeals] = useState([
     {
       id: 1,
       plan: "Combo",
       items: ["Rice", "Chicken"],
       price: "610",
-      description: "Simple and nutritious meal",
+      description:
+        "Simple and nutritious meal with a good balance of carbs and protein.",
       quantity: "1",
       special: "None",
+      calories: "550 kcal",
+      allergens: ["None"],
+      category: "Non-Vegetarian",
     },
     {
-      id: 2,
-      plan: "Dinner",
-      items: ["Paneer", "Salad"],
-      price: "812",
-      description: "Pure veg with fresh ingredients",
+      id: 1,
+      plan: "Combo",
+      items: ["Rice", "Chicken"],
+      price: "610",
+      description:
+        "Simple and nutritious meal with a good balance of carbs and protein.",
       quantity: "1",
-      special: "Vegetarian",
+      special: "None",
+      calories: "550 kcal",
+      allergens: ["None"],
+      category: "Non-Vegetarian",
     },
+
     {
       id: 3,
       plan: "Lunch",
@@ -29,6 +41,9 @@ const MealsPage = () => {
       description: "Packed with protein for gym lovers",
       quantity: "1",
       special: "Fitness",
+      calories: "550 kcal",
+      allergens: ["None"],
+      category: "Non-Vegetarian",
     },
     {
       id: 4,
@@ -38,11 +53,24 @@ const MealsPage = () => {
       description: "Perfect for children",
       quantity: "1",
       special: "Kids Special",
+      calories: "550 kcal",
+      allergens: ["None"],
+      category: "Non-Vegetarian",
     },
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState(null);
+
+  // const [selectedMeal, setSelectedMeal] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSelectedMeal((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const openModal = (meal) => {
     setSelectedMeal(meal);
@@ -50,6 +78,15 @@ const MealsPage = () => {
   };
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleEdit = (meal) => {
+    setIsEdit(true);
+    openModal(meal);
+  };
+
+  const goBack = () => {
+    setIsEdit(false);
   };
 
   return (
@@ -100,7 +137,7 @@ const MealsPage = () => {
                   <td className="px-6 py-4">{meal.special}</td>
                   <td className="px-6 py-4">
                     <button
-                      onClick={() => openModal()}
+                      onClick={() => openModal(meal)}
                       className="text-white bg-green-500 hover:bg-green-600 border px-3 py-2 rounded-md"
                     >
                       view
@@ -112,17 +149,15 @@ const MealsPage = () => {
           </table>
         </div>
       </div>
-      <Modal
-        heading="User Details"
+      <ViewIndivisualMeals
         closeModal={closeModal}
         modalOpen={isModalOpen}
-      >
-        {selectedMeal && (
-          <div>
-            <p>name: {selectedMeal?.price}</p>
-          </div>
-        )}
-      </Modal>
+        selectedMeal={selectedMeal}
+        handleEdit={handleEdit}
+        goBack={goBack}
+        isEdit={isEdit}
+        handleChange={handleChange}
+      />
     </>
   );
 };

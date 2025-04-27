@@ -29,8 +29,8 @@ const AddMealsForm = () => {
 
   return (
     <section className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md space-y-8">
-      {/* Plan Dropdown */}
       <form action="">
+        {/* Plan Dropdown */}
         <div className="space-y-2">
           <label
             htmlFor="plan"
@@ -40,8 +40,13 @@ const AddMealsForm = () => {
           </label>
           <select
             id="plan"
-            value={plan}
-            onChange={(e) => setPlan(e.target.value)}
+            value={plan.plan}
+            onChange={(e) =>
+              setPlan((prev) => ({
+                ...prev,
+                plan: e.target.value,
+              }))
+            }
             className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
           >
             <option value="">Select your meals</option>
@@ -74,6 +79,7 @@ const AddMealsForm = () => {
                 />
                 {mealItems.length > 1 && (
                   <button
+                    type="button"
                     onClick={() => handleRemoveMeal(index)}
                     className="text-red-500 hover:text-red-700 text-xl"
                   >
@@ -84,6 +90,7 @@ const AddMealsForm = () => {
             ))}
           </div>
           <button
+            type="button"
             onClick={handleAddMeal}
             className="mt-4 px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition duration-200"
           >
@@ -149,13 +156,14 @@ const AddMealsForm = () => {
               id="special"
               type="text"
               placeholder="Enter special"
-              className="w-full border  border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
         </div>
+
         <div>
-          <button className="border bg-teal-600 text-white hover:bg-teal-700 w-full py-2 mt-4 bg-">
-            Add Male
+          <button className="border bg-teal-600 text-white hover:bg-teal-700 w-full py-2 mt-4">
+            Add Meal
           </button>
         </div>
       </form>

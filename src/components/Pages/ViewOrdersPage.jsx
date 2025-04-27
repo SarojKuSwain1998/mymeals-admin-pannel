@@ -15,9 +15,11 @@ const ViewOrdersPage = () => {
       number: 9856231478,
       time: "12:30 PM",
       date: "24/04/2025",
-      amount: 500,
-      paymentStatus: "Unpaid",
-      paymentMethod: "COD",
+      payment: {
+        amount: 500,
+        paymentStatus: "Unpaid",
+        paymentMethod: "COD",
+      },
       address: {
         adreesOne: "Jagannath Nagar",
         addressTwo: "GGP Colony",
@@ -70,7 +72,7 @@ const ViewOrdersPage = () => {
                 <th className="px-6 py-3">OrderId</th>
                 <th className="px-6 py-3">Customer Name</th>
                 <th className="px-6 py-3">Email</th>
-                <th className="px-6 py-3">Meal</th>
+                <th className="px-6 py-3">Items</th>
                 <th className="px-6 py-3">Number</th>
                 <th className="px-6 py-3">Payment Status</th>
                 <th className="px-6 py-3">Time</th>
@@ -101,11 +103,7 @@ const ViewOrdersPage = () => {
           </table>
         </div>
       </section>
-      {/* <Modal
-        modalOpen={isModalOpen}
-        selectedOrders={selectedOrders}
-        closeModal={closeModal}
-      ></Modal> */}
+
       <IndivisualAssignOrder
         closeModal={closeModal}
         modalOpen={isModalOpen}

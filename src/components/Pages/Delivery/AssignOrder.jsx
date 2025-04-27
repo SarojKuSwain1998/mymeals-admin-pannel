@@ -69,7 +69,7 @@ const AssignOrder = () => {
                 <th className="px-6 py-3">OrderId</th>
                 <th className="px-6 py-3">Customer Name</th>
                 <th className="px-6 py-3">Email</th>
-                <th className="px-6 py-3">Meal</th>
+                <th className="px-6 py-3">Items</th>
                 <th className="px-6 py-3">Number</th>
                 <th className="px-6 py-3">Payment Status</th>
                 <th className="px-6 py-3">Time</th>
