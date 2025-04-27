@@ -1,7 +1,7 @@
 import { Home } from "lucide-react";
-import Modal from "../../Modal";
+import Modal from "../Modal";
 
-const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
+const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
   return (
     <div>
       <Modal
@@ -116,7 +116,7 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
         </div>
         <div className="flex flex-col gap-2 mt-4">
           <label htmlFor="deliveryStatus" className="">
-            Update Delivery Status:
+            Assign to delivery Partner:
           </label>
           <select
             id="deliveryStatus"
@@ -125,10 +125,10 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
             // onChange={handleStatusChange}
           >
             <option value="">Select Status</option>
-            <option value="pending">Pending</option>
-            <option value="out_for_delivery">Out for Delivery</option>
-            <option value="delivered">Delivered</option>
-            <option value="failed">Failed</option>
+            <option value="pending">Dk Nayak</option>
+            <option value="out_for_delivery">Satish Nayak</option>
+            <option value="delivered">Devsena sahani</option>
+            {/* <option value="failed">Failed</option> */}
           </select>
         </div>
       </Modal>
@@ -136,4 +136,4 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
   );
 };
 
-export default ViewAssignOrder;
+export default IndivisualAssignOrder;
