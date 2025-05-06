@@ -6,6 +6,7 @@ const RegisterForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    number: "",
     password: "",
   });
 
@@ -28,7 +29,7 @@ const RegisterForm = () => {
             autoComplete="name"
             placeholder="Enter your full name"
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-            value={formData.mobile}
+            value={formData?.mobile}
             onChange={(e) => {
               setFormData({ ...formData, mobile: e.target.value });
             }}
@@ -53,13 +54,13 @@ const RegisterForm = () => {
           <div className="space-y-2 w-full">
             <label htmlFor="mobile">Mobile</label>
             <input
-              type="mobile"
+              type="number"
               name="mobile"
               id="mobile"
               autoComplete="mobile"
               placeholder="Enter your mobile"
               className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-              value={formData.mobile}
+              value={formData?.mobile}
               onChange={(e) => {
                 setFormData({ ...formData, mobile: e.target.value });
               }}
