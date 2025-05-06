@@ -1,5 +1,6 @@
 import {
   Eye,
+  Import,
   ShoppingBag,
   ShoppingCart,
   User,
@@ -76,9 +77,11 @@ const HomePage = () => {
           />
           <StatCard
             number={56}
-            title="Total Users"
+            title="Saved Posts"
             percentage={95}
-            icon={<Users className="h-12 w-12 p-1 text-brand-950" />}
+            icon={
+              <Import className="h-10 w-12 p-2 text-white bg-yellow-500 rounded-lg" />
+            }
           />
         </div>
         <div className="flex gap-6">
@@ -135,6 +138,17 @@ const HomePage = () => {
             <CommentCards />
           </div>
         </div>
+        <p className="py-4">
+          &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://mymeals.in"
+            className="text-brand-950 underline underline-offset-4"
+            title="Go to Example com"
+            alt="a to example Website"
+          >
+            My Meals Company
+          </a>
+        </p>
       </section>
     </>
   );

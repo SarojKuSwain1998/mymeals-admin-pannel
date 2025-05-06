@@ -150,7 +150,7 @@ const AddMealsForm = () => {
               htmlFor="special"
               className="text-sm font-medium text-gray-700"
             >
-              Today’s Special
+              Today&apos;s Special
             </label>
             <input
               id="special"
