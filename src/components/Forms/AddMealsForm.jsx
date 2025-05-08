@@ -47,7 +47,7 @@ const AddMealsForm = () => {
                 plan: e.target.value,
               }))
             }
-            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+            className="w-full border dark:text-black   border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
           >
             <option value="">Select your meals</option>
             <option value="Combo Lunch & Dinner">Combo Lunch & Dinner</option>
@@ -58,10 +58,10 @@ const AddMealsForm = () => {
 
         {/* Meal Items */}
         <div>
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
+          <h2 className="text-lg dark:text-black font-semibold text-gray-800 ">
             Meal Items
           </h2>
-          <label htmlFor="" className="mb-2">
+          <label htmlFor="" className="">
             Item Name
           </label>
           <div className="space-y-3">
@@ -75,7 +75,7 @@ const AddMealsForm = () => {
                   placeholder={`Item-${index + 1}`}
                   value={item}
                   onChange={(e) => handleMealChange(index, e.target.value)}
-                  className="flex-grow border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  className="flex-grow border dark:text-black  border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
                 />
                 {mealItems.length > 1 && (
                   <button
@@ -103,7 +103,7 @@ const AddMealsForm = () => {
           <div className="space-y-2">
             <label
               htmlFor="price"
-              className="text-sm font-medium text-gray-700"
+              className="text-sm  font-medium text-gray-700"
             >
               Price
             </label>
@@ -111,7 +111,7 @@ const AddMealsForm = () => {
               id="price"
               type="number"
               placeholder="Enter price"
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border dark:text-black border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -126,7 +126,7 @@ const AddMealsForm = () => {
               id="quantity"
               type="number"
               placeholder="Enter quantity"
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border dark:text-black border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -141,7 +141,7 @@ const AddMealsForm = () => {
               id="description"
               rows={3}
               placeholder="Enter description"
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border dark:text-black border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -156,7 +156,7 @@ const AddMealsForm = () => {
               id="special"
               type="text"
               placeholder="Enter special"
-              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full border dark:text-black border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
         </div>

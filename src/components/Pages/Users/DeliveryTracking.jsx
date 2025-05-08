@@ -46,7 +46,12 @@ export default function TrackOrder() {
           <h3 className="text-lg font-semibold">Delivery By</h3>
           <p>Name: Ankit Sharma</p>
           <p>Phone: 98765 43210</p>
-          <Button variant="outline">Call Now</Button>
+          <Button
+            variant="outline"
+            className="dark:bg-gray-800 dark:text-white"
+          >
+            Call Now
+          </Button>
         </CardContent>
       </Card>
 

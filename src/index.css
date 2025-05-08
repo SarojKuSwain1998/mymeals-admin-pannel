@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* index.css or App.css */
+/* 
+html.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+html.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  
+} */
+
+/* Apply variables in your components */
+/* body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+} */
+
+html.light {
+  background-color: white;
+  color: black;
+  background-color: gray;
+  color: white;
+}
+
+html.dark {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  font-family: sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}

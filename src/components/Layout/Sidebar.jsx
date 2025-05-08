@@ -1,9 +1,12 @@
 import { Button } from "@mui/material";
-import { ChevronDown, LayoutDashboard, Menu } from "lucide-react";
+import { ChevronDown, LayoutDashboard, Menu, Moon, Sun } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "../context/ThemeContext";
 
 const Sidebar = () => {
   const [profileDropdown, setProfileDropdown] = useState(false);
+  // const [theme, setTheme] = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const [productsDropdown, setProductsDropdown] = useState(false);
   const [usersDropdown, setUsersDropdown] = useState(false);
   const [deliveryDropdown, setDeliveryDropdown] = useState(false);
@@ -36,10 +39,24 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <aside className="h-screen w-64 bg-white p-8   text-black fixed">
-      <div className="flex items-center mb-8">
+    // <aside className="h-screen w-64 bg-white p-8   text-black fixed">
+    <aside className="h-screen w-64 bg-white dark:bg-gray-900 p-8 text-black dark:text-white fixed">
+      {/* <div className="flex items-center mb-8">
         <img src="./images/logo.png" alt="Logo" className="w-16 h-16 mr-2" />
         <span className="text-xl font-semibold">MyMeals</span>
+      </div> */}
+      <div className="flex items-center mb-8 justify-between">
+        <div className="flex items-center">
+          <img
+            src={"./images/logo.png" || "../images/logo.png"}
+            alt="Logo"
+            className="w-16 h-16 mr-2"
+          />
+          <span className="text-xl font-semibold">MyMeals</span>
+        </div>
+        <button onClick={toggleTheme}>
+          {theme === "light" ? <Moon /> : <Sun />}
+        </button>
       </div>
 
       <ul className="space-y-4">
@@ -53,7 +70,7 @@ const Sidebar = () => {
         <li ref={productsRef}>
           <button
             onClick={() => setProductsDropdown(!productsDropdown)}
-            className="flex  px-3 hover:bg-gray-300 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
+            className="flex  px-3 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
           >
             <span>Admin Panel</span>
             <ChevronDown
@@ -67,7 +84,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/users"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Users Reports
                 </a>
@@ -75,7 +92,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/meals"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Meals Page
                 </a>
@@ -83,7 +100,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/add-meals"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Add Meals
                 </a>
@@ -91,7 +108,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/orders"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   View Orders
                 </a>
@@ -103,7 +120,7 @@ const Sidebar = () => {
         <li ref={usersRef}>
           <button
             onClick={() => setUsersDropdown(!usersDropdown)}
-            className="flex  px-3 hover:bg-gray-300 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
+            className="flex  px-3 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
           >
             <span>User Panel</span>
             <ChevronDown
@@ -115,7 +132,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/user/user-register"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   User Register
                 </a>
@@ -123,7 +140,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/user/schedule-meals"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Schedule Meals
                 </a>
@@ -131,7 +148,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/user/compaintpage"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Complaint Form
                 </a>
@@ -139,7 +156,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/user/delivery-tracking"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Tracking Delivery
                 </a>
@@ -151,7 +168,7 @@ const Sidebar = () => {
         <li ref={deliveryRef}>
           <button
             onClick={() => setDeliveryDropdown(!deliveryDropdown)}
-            className="flex  px-3 hover:bg-gray-300 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
+            className="flex  px-3 hover:bg-gray-300 dark:hover:bg-gray-600 rounded-md items-center justify-between w-full py-2 hover:border-gray-300"
           >
             <span>Delivery Panel</span>
             <ChevronDown
@@ -165,7 +182,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/delivery/assign-orders"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Assign Orders
                 </a>
@@ -173,7 +190,7 @@ const Sidebar = () => {
               <li>
                 <a
                   href="/delivery/delivery-history"
-                  className="block py-1 hover:underline hover:text-black transition duration-300 ease-in-out"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Delivery History
                 </a>
@@ -184,59 +201,11 @@ const Sidebar = () => {
       </ul>
 
       {/* Profile Section */}
-      {/* <div className="absolute bottom-4 left-4 right-4" ref={profileRef}>
-        <button
-          onClick={() => setProfileDropdown(!profileDropdown)}
-          className="flex items-center gap-3 w-full"
-        >
-          <div className="flex-1">
-            <p className="text-sm font-semibold">John</p>
-            <p className="text-xs text-gray-400">Admin</p>
-          </div>
-          <img
-            src="/images/logo.png"
-            alt="User"
-            className="w-8 h-8 rounded-full bg-white"
-          />
-        </button>
-        {profileDropdown && (
-          <div className="mt-2 w-full rounded-md bg-white text-gray-800 shadow-md">
-            <ul className="p-2">
-              <li>
-                <a
-                  href="/profile"
-                  className="block py-1 hover:bg-gray-100 px-2 rounded"
-                >
-                  Profile
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/settings"
-                  className="block py-1 hover:bg-gray-100 px-2 rounded"
-                >
-                  Settings
-                </a>
-              </li>
-              <hr className="my-2" />
-              <li>
-                <a href="/login">
-                  <Button
-                    fullWidth
-                    variant="outlined"
-                    className="text-gray-700"
-                  >
-                    Logout
-                  </Button>
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div> */}
+
       <div>
         <a href="/login">
-          <button className="border bg-gray-300 hover:bg-gray-500 rounded-md py-2 absolute bottom-4 left-4 right-8">
+          <button className="border bg-gray-300 dark:bg-gray-600 hover:bg-gray-500 dark:hover:bg-gray-700 rounded-md py-2 absolute bottom-4 left-4 right-8">
+            {" "}
             Logout
           </button>
         </a>

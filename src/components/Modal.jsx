@@ -29,16 +29,16 @@ const Modal = ({ heading, modalOpen, closeModal, children }) => {
     <>
       {modalOpen && (
         <>
-          <div className="fixed inset-0 z-40 bg-gray-950/50"></div>
+          <div className="fixed inset-0 z-40  bg-gray-950/50"></div>
           <div
             id="default-modal"
             tabIndex="-1"
-            className="fixed bottom-0 right-0 top-0 z-50 h-full max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-white md:w-2/3 lg:w-1/2"
+            className="fixed bottom-0 right-0 top-0 z-50 h-full max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden dark:bg-gray-900 bg-white md:w-2/3 lg:w-1/2"
           >
             <div className="relative h-full max-h-full w-full p-4">
               <div className="relative">
-                <div className="flex items-center justify-between rounded-t border-b p-4 dark:border-gray-600 md:p-5">
-                  <h3 className="text-xl font-semibold capitalize text-gray-900 dark:text-white">
+                <div className="flex items-center justify-between rounded-t border-b p-4  dark:border-gray-600 md:p-5">
+                  <h3 className="text-xl font-semibold capitalize text-gray-900   dark:text-white">
                     {heading}
                   </h3>
                   <button

@@ -53,7 +53,9 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           {/* Address Heading */}
           <div className="flex items-center gap-2">
             <Home className="text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-700">Address</h2>
+            <h2 className="text-xl font-bold text-gray-700 dark:text-white">
+              Address
+            </h2>
           </div>
 
           {/* Address Info */}
@@ -121,7 +123,7 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           <select
             id="deliveryStatus"
             name="deliveryStatus"
-            className="border px-4 py-2 rounded-md"
+            className="border px-4 py-2 rounded-md dark:text-black border-gray-300"
             // onChange={handleStatusChange}
           >
             <option value="">Select Status</option>

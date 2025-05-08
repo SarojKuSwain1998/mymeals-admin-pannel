@@ -17,7 +17,7 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const PieChart = () => {
   return (
-    <div className="p-4 mt-4 rounded-2xl shadow-lg bg-white max-w-md mx-auto">
+    <div className="p-4 mt-4 dark:bg-gray-800 rounded-2xl shadow-lg bg-white max-w-md mx-auto">
       <h1 className="text-xl font-bold mb-4 text-center">Visitors Profile</h1>
       <RechartsPieChart width={300} height={300}>
         <Pie

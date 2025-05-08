@@ -81,7 +81,10 @@ const ViewOrdersPage = () => {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <tr key={order.orderId}>
+                <tr
+                  key={order.orderId}
+                  className="border-b bg-white hover:bg-gray-50"
+                >
                   <td className="px-6 py-4">{order.orderId}</td>
                   <td className="px-6 py-4">{order.customerName}</td>
                   <td className="px-6 py-4">{order.email}</td>

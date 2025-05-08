@@ -5,7 +5,7 @@ const UserRegister = () => {
     <section className="flex  w-full justify-center px-4 pt-16   md:px-20 lg:px-40">
       <div className="relative h-auto w-11/12 rounded-md bg-white p-4 shadow md:w-8/12 lg:w-5/12 xl:w-1/2">
         <img
-          src="./images/logo.png"
+          src="../images/logo.png"
           alt="My Meals Logo"
           width={200}
           height={200}

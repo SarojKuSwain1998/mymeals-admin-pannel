@@ -78,7 +78,10 @@ const AssignOrder = () => {
             </thead>
             <tbody>
               {orders.map((order) => (
-                <tr key={order.orderId}>
+                <tr
+                  key={order.orderId}
+                  className="border-b border-gray-200 dark:bg-white"
+                >
                   <td className="px-6 py-4">{order.orderId}</td>
                   <td className="px-6 py-4">{order.customerName}</td>
                   <td className="px-6 py-4">{order.email}</td>

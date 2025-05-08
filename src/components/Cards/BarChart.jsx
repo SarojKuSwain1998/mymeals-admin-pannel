@@ -72,7 +72,7 @@ const BarChart = () => {
     },
   };
 
-  return <Bar data={data} options={options} />;
+  return <Bar className="dark:bg-gray-800" data={data} options={options} />;
 };
 
 export default BarChart;

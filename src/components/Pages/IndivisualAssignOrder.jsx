@@ -13,7 +13,7 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
         <div className="space-y-6 text-gray-800">
           {/* Order Info */}
           <div className="grid md:grid-cols-2 gap-6 bg-white border border-gray-300 shadow-sm px-6 py-5 rounded-lg">
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">
                 Order ID:
               </label>
@@ -22,7 +22,7 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
               </p>
             </div>
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">
                 Customer Name:
               </label>
@@ -31,24 +31,24 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
               </p>
             </div>
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">Meal:</label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.meal}</p>
             </div>
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">
                 Phone Number:
               </label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.number}</p>
             </div>
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">Time:</label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.time}</p>
             </div>
 
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-start">
               <label className="w-32 font-semibold text-gray-600">Date:</label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.date}</p>
             </div>
@@ -57,7 +57,9 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           {/* Address Heading */}
           <div className="flex items-center gap-2">
             <Home className="text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-700">Address</h2>
+            <h2 className="text-xl font-bold dark:text-white text-gray-700">
+              Address
+            </h2>
           </div>
 
           {/* Address Info */}
@@ -123,7 +125,9 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           </div>
           <div className="flex items-center gap-2">
             <CreditCard className="text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-700">Payment Info</h2>
+            <h2 className="text-xl font-bold dark:text-white   text-gray-700">
+              Payment Info
+            </h2>
           </div>
           <div>
             <div className="flex justify-between bg-white border border-gray-300 shadow-sm px-6 py-5 rounded-lg">
@@ -163,7 +167,7 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           <select
             id="deliveryStatus"
             name="deliveryStatus"
-            className="border px-4 py-2 rounded-md"
+            className="border px-4 dark:text-black py-2 rounded-md"
             // onChange={handleStatusChange}
           >
             <option value="">Select Status</option>

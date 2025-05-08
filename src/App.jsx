@@ -19,6 +19,7 @@ import DeliveryTracking from "./components/Pages/Users/DeliveryTracking";
 import AssignOrder from "./components/Pages/Delivery/AssignOrder";
 import DeliveryHistory from "./components/Pages/Delivery/DeliveryHistory";
 import Sidebar from "./components/Layout/Sidebar";
+import { ThemeProvider } from "./components/context/ThemeContext";
 
 function LayoutWithNavbar() {
   const location = useLocation();
@@ -28,19 +29,17 @@ function LayoutWithNavbar() {
   const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      style={{ display: "flex" }}
+      // className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white"
+      className="bg-white text-black dark:bg-gray-900 dark:text-white"
+    >
       {!shouldHideNavbar && <Sidebar />}
 
       <div
-        style={{
-          flex: 1,
-          marginLeft: !shouldHideNavbar ? "160px" : "0",
-          padding: "1px",
-          backgroundColor: "#e5e7eb",
-          minHeight: "100vh",
-          overflow: "auto",
-          paddingTop: "20px",
-        }}
+        className={`flex-1 min-h-screen overflow-auto pt-5 ${
+          shouldHideNavbar ? "ml-0" : "ml-40"
+        } bg-blue-50 text-black dark:bg-black dark:text-white`}
       >
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -70,7 +69,9 @@ function LayoutWithNavbar() {
 function App() {
   return (
     <Router>
-      <LayoutWithNavbar />
+      <ThemeProvider>
+        <LayoutWithNavbar />
+      </ThemeProvider>
     </Router>
   );
 }

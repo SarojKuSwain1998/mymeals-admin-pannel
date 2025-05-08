@@ -27,13 +27,13 @@ const comments = [
 
 const CommentCards = () => {
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 max-w-4xl ">
-      <h1 className="text-xl font-semibold text-blue-900 mb-4">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 max-w-4xl ">
+      <h1 className="text-xl font-semibold dark:text-blue-100  text-blue-900 mb-4">
         Latest Comments
       </h1>
       <table className="w-full table-auto">
         <thead>
-          <tr className="text-left text-gray-500 border-b">
+          <tr className="text-left text-gray-500 dark:text-white border-b">
             <th className="pb-2">Name</th>
             <th className="pb-2">Comment</th>
           </tr>
@@ -47,9 +47,13 @@ const CommentCards = () => {
                   alt={user.name}
                   className="w-10 h-10 rounded-full"
                 />
-                <span className="font-semibold text-blue-800">{user.name}</span>
+                <span className="font-semibold dark:text-blue-100  text-blue-800">
+                  {user.name}
+                </span>
               </td>
-              <td className="text-gray-700 py-4">{user.comment}</td>
+              <td className="text-gray-700 dark:text-white py-4">
+                {user.comment}
+              </td>
             </tr>
           ))}
         </tbody>

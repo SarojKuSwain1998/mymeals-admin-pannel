@@ -96,8 +96,11 @@ const HomePage = () => {
               rounded: "600px",
               borderRadius: "10px",
             }}
+            className="dark:bg-gray-800"
           >
-            <h2 className="text-2xl font-bold">Profile Visits</h2>
+            <h2 className="text-2xl dark:text-black font-bold">
+              Profile Visits
+            </h2>
             <BarChart />
           </div>
           <PieChart />

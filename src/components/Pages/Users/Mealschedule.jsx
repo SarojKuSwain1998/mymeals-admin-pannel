@@ -36,28 +36,28 @@ const Mealschedule = () => {
       {/* Meal Form */}
       <form
         onSubmit={handleAddMeal}
-        className="bg-white rounded shadow p-6 mb-10 space-y-4"
+        className="bg-white  rounded shadow p-6 mb-10 space-y-4"
       >
         <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
           <input
             type="text"
             name="name"
             placeholder="Meal Name"
-            className="border px-4 py-2 rounded w-full"
+            className="border dark:text-black px-4 py-2 rounded w-full"
             value={form.name}
             onChange={handleChange}
           />
           <input
             type="date"
             name="date"
-            className="border px-4 py-2 rounded w-full"
+            className="border px-4 dark:text-black py-2 rounded w-full"
             value={form.date}
             onChange={handleChange}
           />
           <input
             type="time"
             name="time"
-            className="border px-4 py-2 rounded w-full"
+            className="border px-4 py-2 dark:text-black rounded w-full"
             value={form.time}
             onChange={handleChange}
           />

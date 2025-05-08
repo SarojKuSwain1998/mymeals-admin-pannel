@@ -17,7 +17,7 @@ const LineChart = ({
   gradientId = "colorFill",
 }) => {
   return (
-    <div className="p-4 bg-white  shadow w-72 ">
+    <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow w-72 ">
       <div className="flex justify-between">
         <h2 className="text-lg font-bold text-center ">{title}</h2>
         <p className="text-lg font-bold text-center ">{title1}</p>
