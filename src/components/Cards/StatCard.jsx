@@ -1,9 +1,9 @@
 const StatCard = ({ number, icon, title, percentage }) => {
   return (
     <>
-      <div className="border-stroke rounded-lg border dark:bg-gray-900 bg-white px-8 py-6 shadow shadow-brand-950/10">
+      <div className="border-stroke rounded-lg border dark:bg-gray-900 bg-white px-12 w-56 py-6 shadow shadow-brand-950/10">
         <div className="flex gap-4">
-          <div className=" border bg-sky-500  h-10 w-12 text-white  rounded-lg bg-brand-950/10 ">
+          <div className="   h-10 w-12 text-white  rounded-xl bg-brand-950/10 ">
             {icon}
           </div>
           <div className="flex items-center justify-between">

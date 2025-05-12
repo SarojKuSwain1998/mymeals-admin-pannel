@@ -53,7 +53,7 @@ const ViewAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
           {/* Address Heading */}
           <div className="flex items-center gap-2">
             <Home className="text-blue-600" />
-            <h2 className="text-xl font-bold text-gray-700 dark:text-white">
+            <h2 className="text-xl font-bold text-gray-700 dark:text-white  ">
               Address
             </h2>
           </div>

@@ -36,19 +36,19 @@ const IndivisualAssignOrder = ({ modalOpen, closeModal, selectedOrders }) => {
               <p className="text-gray-900 text-xl ">{selectedOrders?.meal}</p>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-start  ">
               <label className="w-32 font-semibold text-gray-600">
                 Phone Number:
               </label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.number}</p>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-start  ">
               <label className="w-32 font-semibold text-gray-600">Time:</label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.time}</p>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-start  ">
               <label className="w-32 font-semibold text-gray-600">Date:</label>
               <p className="text-gray-900 text-xl ">{selectedOrders?.date}</p>
             </div>

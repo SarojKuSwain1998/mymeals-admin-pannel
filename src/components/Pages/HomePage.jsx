@@ -1,9 +1,11 @@
 import {
   Eye,
   Import,
+  ImportIcon,
   ShoppingBag,
   ShoppingCart,
   User,
+  User2Icon,
   UserPlus,
   Users,
 } from "lucide-react";
@@ -49,40 +51,49 @@ const HomePage = () => {
   return (
     <>
       <GreetUser />
-      <section className="w-full px-4 pt-2 md:px-20 lg:px-40">
-        <div className="2xl:gap-7.5 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4">
-          <StatCard
-            number={46}
-            title="Total Views"
-            percentage={95}
-            icon={
-              <Eye className="h-10 w-12 p-2 text-white bg-indigo-400 rounded-lg" />
-            }
-          />
-          <StatCard
-            number={42}
-            title="Total Followers"
-            percentage={95}
-            icon={
-              <Users className="h-10 w-12 p-2 text-white bg-blue-500 rounded-lg" />
-            }
-          />
-          <StatCard
-            number={456}
-            title="Total Followings"
-            percentage={95}
-            icon={
-              <UserPlus className="h-10 w-12 p-2 text-white bg-green-500 rounded-lg" />
-            }
-          />
-          <StatCard
-            number={56}
-            title="Saved Posts"
-            percentage={95}
-            icon={
-              <Import className="h-10 w-12 p-2 text-white bg-yellow-500 rounded-lg" />
-            }
-          />
+      <section className="w-full px-4 pt-2 md:px-20 lg:px-36">
+        <div className="flex justify-between gap-24">
+          <div className="2xl:gap-8  grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 xl:grid-cols-4">
+            <StatCard
+              number={46}
+              title="Total Views"
+              percentage={95}
+              icon={
+                <Eye className="h-12 w-12 p-2 mt-2 text-white bg-indigo-400 rounded-lg" />
+              }
+            />
+            <StatCard
+              number={42}
+              title="Total Followers"
+              percentage={95}
+              icon={
+                <Users className="h-12 w-12 p-2 mt-2 text-white bg-blue-500 rounded-lg" />
+              }
+            />
+            <StatCard
+              number={456}
+              title="Total Followings"
+              percentage={95}
+              icon={
+                <UserPlus className="h-12 w-12 mt-2 p-2 text-white bg-green-500 rounded-lg" />
+              }
+            />
+            <StatCard
+              number={56}
+              title="Saved Posts"
+              percentage={95}
+              icon={
+                <Import className="h-12 w-12 p-2 mt-2 text-white bg-yellow-500 rounded-lg" />
+              }
+            />
+          </div>
+          <div className="flex border w-56 my-2 py-5 px-6 gap-4 bg-white rounded-lg">
+            <User2Icon className="border rounded-full h-12 bg-orange-800 w-auto" />
+            <div>
+              <h2>John Cena</h2>
+              <p>@johncena</p>
+            </div>
+          </div>
         </div>
         <div className="flex gap-6">
           <div
