@@ -91,6 +91,22 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
+                  href="/user-list"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
+                >
+                  User-List
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/teams"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
+                >
+                  Teams
+                </a>
+              </li>
+              <li>
+                <a
                   href="/meals"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
@@ -111,6 +127,14 @@ const Sidebar = () => {
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   View Orders
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/template"
+                  className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
+                >
+                  Notification
                 </a>
               </li>
             </ul>

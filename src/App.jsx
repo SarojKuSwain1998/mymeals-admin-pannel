@@ -20,6 +20,10 @@ import AssignOrder from "./components/Pages/Delivery/AssignOrder";
 import DeliveryHistory from "./components/Pages/Delivery/DeliveryHistory";
 import Sidebar from "./components/Layout/Sidebar";
 import { ThemeProvider } from "./components/context/ThemeContext";
+import NotificationForm from "./components/Pages/NotificationForm";
+import UserLists from "./components/Pages/UserLists";
+import TeamsPage from "./components/Pages/TeamsPage";
+import AddTeams from "./components/Pages/AddTeams";
 
 function LayoutWithNavbar() {
   const location = useLocation();
@@ -29,40 +33,45 @@ function LayoutWithNavbar() {
   const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
 
   return (
-      <div
-        style={{ display: "flex" }}
-        // className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white"
-        className="bg-white text-black dark:bg-gray-900 dark:text-white"
-      >
-        {!shouldHideNavbar && <Sidebar />}
+    <div
+      style={{ display: "flex" }}
+      // className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white"
+      className="bg-white text-black dark:bg-gray-900 dark:text-white"
+    >
+      {!shouldHideNavbar && <Sidebar />}
 
-        <div
-          className={`flex-1 min-h-screen overflow-auto pt-5 ${
-            shouldHideNavbar ? "ml-0" : "ml-40"
-          } bg-blue-50 text-black dark:bg-black dark:text-white`}
-        >
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/meals" element={<MealsPage />} />
-            <Route path="/add-meals" element={<AddMealsPage />} />
-            <Route path="/orders" element={<ViewOrdersPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/user/user-register" element={<UserRegister />} />
-            <Route path="/user/schedule-meals" element={<Mealschedule />} />
-            <Route path="/user/compaintpage" element={<ComplaintPage />} />
-            <Route
-              path="/user/delivery-tracking"
-              element={<DeliveryTracking />}
-            />
-            <Route path="/delivery/assign-orders" element={<AssignOrder />} />
-            <Route
-              path="/delivery/delivery-history"
-              element={<DeliveryHistory />}
-            />
-          </Routes>
-        </div>
+      <div
+        className={`flex-1 min-h-screen overflow-auto pt-5 ${
+          shouldHideNavbar ? "ml-0" : "ml-40"
+        } bg-blue-50 text-black dark:bg-black dark:text-white`}
+      >
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/users" element={<UsersPage />} />
+          <Route path="/meals" element={<MealsPage />} />
+          <Route path="/add-meals" element={<AddMealsPage />} />
+          <Route path="/orders" element={<ViewOrdersPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/user-list" element={<UserLists />} />
+          <Route path="/add-teams" element={<AddTeams />} />
+
+          <Route path="/teams" element={<TeamsPage />} />
+          <Route path="/template" element={<NotificationForm />} />
+          <Route path="/user/user-register" element={<UserRegister />} />
+          <Route path="/user/schedule-meals" element={<Mealschedule />} />
+          <Route path="/user/compaintpage" element={<ComplaintPage />} />
+          <Route
+            path="/user/delivery-tracking"
+            element={<DeliveryTracking />}
+          />
+          <Route path="/delivery/assign-orders" element={<AssignOrder />} />
+          <Route
+            path="/delivery/delivery-history"
+            element={<DeliveryHistory />}
+          />
+        </Routes>
       </div>
+    </div>
   );
 }
 
