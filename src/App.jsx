@@ -25,6 +25,16 @@ import UserLists from "./components/Pages/UserLists";
 import TeamsPage from "./components/Pages/TeamsPage";
 import AddTeams from "./components/Pages/AddTeams";
 
+import PaymentPage from "./components/Pages/PaymentPage";
+import InventoryPage from "./components/Pages/InventoryPage";
+import PurchasePage from "./components/Pages/PurchasePage";
+import FormListPage from "./components/Pages/FormListPage";
+import PauseAndResumeForm from "./components/Forms/PauseAndResumeForm";
+import RenewalForm from "./components/Forms/RenewalForm";
+import UpdateContactForm from "./components/Forms/UpdateContactForm";
+import ChangeDeliveryLocationForm from "./components/Forms/ChangeDeliveryLocationForm.JSX";
+import ComplaintForm from "./components/Forms/ComplaintForm";
+
 function LayoutWithNavbar() {
   const location = useLocation();
 
@@ -54,7 +64,18 @@ function LayoutWithNavbar() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/user-list" element={<UserLists />} />
           <Route path="/add-teams" element={<AddTeams />} />
-
+          <Route path="/payment-page" element={<PaymentPage />} />
+          <Route path="/purchase" element={<PurchasePage />} />
+          <Route path="/inventory" element={<InventoryPage />} />
+          <Route path="/form-list" element={<FormListPage />} />
+          <Route path="/pauseandresume" element={<PauseAndResumeForm />} />
+          <Route path="/renewal" element={<RenewalForm />} />
+          <Route path="/update-contact" element={<UpdateContactForm />} />
+          <Route path="/complaint-form" element={<ComplaintForm />} />
+          <Route
+            path="/change-delivery-location"
+            element={<ChangeDeliveryLocationForm />}
+          />
           <Route path="/teams" element={<TeamsPage />} />
           <Route path="/template" element={<NotificationForm />} />
           <Route path="/user/user-register" element={<UserRegister />} />

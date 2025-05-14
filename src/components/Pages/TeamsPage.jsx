@@ -159,7 +159,179 @@ const TeamsPage = () => {
         modalOpen={isModalOpen}
         closeModal={closeModal}
       >
-        <div>Hii</div>
+        <div className="p-6 max-w-4xl mx-auto bg-white shadow-lg rounded-lg space-y-8">
+          {/* Personal Details Section */}
+          <div>
+            <h2 className="text-xl font-semibold text-blue-600 border-b pb-2 mb-4">
+              Personal Details
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="Id" className="block font-medium text-gray-600">
+                  ID:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.empId}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Name"
+                  className="block font-medium text-gray-600"
+                >
+                  Name:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">{selectedTeams?.name}</p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Email"
+                  className="block font-medium text-gray-600"
+                >
+                  Email:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.email}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Phone"
+                  className="block font-medium text-gray-600"
+                >
+                  Phone:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.phone}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Gender"
+                  className="block font-medium text-gray-600"
+                >
+                  Gender:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.gender}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="DOB"
+                  className="block font-medium text-gray-600"
+                >
+                  DOB:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">{selectedTeams?.dob}</p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Role"
+                  className="block font-medium text-gray-600"
+                >
+                  Role:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">{selectedTeams?.role}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Address Section */}
+          <div>
+            <h2 className="text-xl font-semibold text-green-600 border-b pb-2 mb-4">
+              Address
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="Street"
+                  className="block font-medium text-gray-600"
+                >
+                  Street:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.address?.street}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="City"
+                  className="block font-medium text-gray-600"
+                >
+                  City:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.address?.city}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="State"
+                  className="block font-medium text-gray-600"
+                >
+                  State:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.address?.state}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Country"
+                  className="block font-medium text-gray-600"
+                >
+                  Country:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.address?.country}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Pincode"
+                  className="block font-medium text-gray-600"
+                >
+                  Pincode:
+                </label>
+                <p className="bg-gray-100 p-2 rounded">
+                  {selectedTeams?.address?.pincode}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sensitive Details Section */}
+          <div>
+            <h2 className="text-xl font-semibold text-red-600 border-b pb-2 mb-4">
+              Sensitive Details
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label
+                  htmlFor="Adhar"
+                  className="block font-medium text-gray-600"
+                >
+                  Adhar Number:
+                </label>
+                <p className="bg-red-50 p-2 rounded border border-red-200">
+                  {selectedTeams?.sensitiveDetails?.adharNumber}
+                </p>
+              </div>
+              <div>
+                <label
+                  htmlFor="Pan"
+                  className="block font-medium text-gray-600"
+                >
+                  Pan Number:
+                </label>
+                <p className="bg-red-50 p-2 rounded border border-red-200">
+                  {selectedTeams?.sensitiveDetails?.panNumber}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </Modal>
     </>
   );

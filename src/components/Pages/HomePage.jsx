@@ -60,7 +60,7 @@ const HomePage = () => {
   return (
     <>
       <GreetUser />
-      <section className="w-full px-4 pt-6 sm:px-6 md:px-12 lg:px-24 xl:px-32 bg-[#EFF6FF] dark:bg-gray-900">
+      <section className="w-full px-4 pt-6 sm:px-6 md:px-12 lg:px-24 xl:px-32 bg-lime-500 dark:bg-gray-900">
         {/* Top Section: Stats + User Info */}
         <div className="flex flex-col xl:flex-row justify-between gap-6 xl:gap-12 mb-10">
           {/* Stat Cards */}
@@ -158,12 +158,13 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl">
+        <div className="flex gap-6 w-full">
+          {/* Profile Visit Card */}
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex flex-col">
             <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
               Profile Visit
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-6 w-full">
               <LineChart
                 title="Europe"
                 title1="280"
@@ -195,23 +196,25 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
-              <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
-                Latest Comments
-              </h2>
+          {/* Latest Comments */}
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex flex-col">
+            <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
+              Latest Comments
+            </h2>
+            <div className="w-full">
               <CommentCards />
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
-              <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
-                Visitors Profile
-              </h2>
+          {/* Visitors Profile */}
+          {/* <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex flex-col">
+            <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">
+              Visitors Profile
+            </h2>
+            <div className="w-full">
               <PieChart />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <footer className="text-center py-6 text-sm text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
