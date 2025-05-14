@@ -43,7 +43,7 @@ function LayoutWithNavbar() {
       <div
         className={`flex-1 min-h-screen overflow-auto pt-5 ${
           shouldHideNavbar ? "ml-0" : "ml-40"
-        } bg-blue-50 text-black dark:bg-black dark:text-white`}
+        } bg-lime-500 text-black dark:bg-black dark:text-white`}
       >
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -49,160 +49,171 @@ const ViewIndivisualMeals = ({
       goBack={goBack}
       selectedMeal={selectedMeal}
     >
-      <div className="space-y-4">
+      <div className="space-y-6 max-w-xl w-full mx-auto px-4 py-6 bg-white rounded-lg shadow-md">
         {/* PLAN */}
-        <div>
-          <label>Plan:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Plan:</label>
           {isEdit ? (
             <input
               name="plan"
               value={tempMeal.plan || ""}
               onChange={handleChange}
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           ) : (
-            <p>{selectedMeal.plan}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.plan}</p>
           )}
         </div>
 
         {/* ITEMS */}
-        <div>
-          <label>Items:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Items:</label>
           {isEdit ? (
             <input
               name="items"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.items?.join(", ") || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal?.items?.join(", ")}</p>
+            <p className="text-gray-800 text-sm">
+              {selectedMeal?.items?.join(", ")}
+            </p>
           )}
         </div>
 
         {/* PRICE */}
-        <div>
-          <label>Price:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Price:</label>
           {isEdit ? (
             <input
               name="price"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.price || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.price}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.price}</p>
           )}
         </div>
 
         {/* DESCRIPTION */}
-        <div>
-          <label>Description:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">
+            Description:
+          </label>
           {isEdit ? (
             <textarea
               name="description"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.description || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.description}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.description}</p>
           )}
         </div>
 
         {/* QUANTITY */}
-        <div>
-          <label>Quantity:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Quantity:</label>
           {isEdit ? (
             <input
               name="quantity"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.quantity || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.quantity}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.quantity}</p>
           )}
         </div>
 
         {/* SPECIAL */}
-        <div>
-          <label>Special:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Special:</label>
           {isEdit ? (
             <input
               name="special"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.special || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.special}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.special}</p>
           )}
         </div>
 
         {/* CALORIES */}
-        <div>
-          <label>Calories:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Calories:</label>
           {isEdit ? (
             <input
               name="calories"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.calories || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.calories}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.calories}</p>
           )}
         </div>
 
         {/* ALLERGENS */}
-        <div>
-          <label>Allergens:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">
+            Allergens:
+          </label>
           {isEdit ? (
             <input
               name="allergens"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.allergens?.join(", ") || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.allergens?.join(", ")}</p>
+            <p className="text-gray-800 text-sm">
+              {selectedMeal.allergens?.join(", ")}
+            </p>
           )}
         </div>
 
         {/* CATEGORY */}
-        <div>
-          <label>Category:</label>
+        <div className="space-y-1">
+          <label className="text-sm font-medium text-gray-700">Category:</label>
           {isEdit ? (
             <input
               name="category"
-              className="w-full border border-gray-300 px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 "
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={tempMeal.category || ""}
               onChange={handleChange}
             />
           ) : (
-            <p>{selectedMeal.category}</p>
+            <p className="text-gray-800 text-sm">{selectedMeal.category}</p>
           )}
         </div>
 
         {/* BUTTONS */}
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-3 pt-2">
           {isEdit ? (
             <>
               <button
                 onClick={handleSave}
-                className="bg-green-500 text-white px-3 py-1"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md text-sm transition"
               >
                 Save
               </button>
-              <button onClick={handleCancel} className="bg-gray-300 px-3 py-1">
+              <button
+                onClick={handleCancel}
+                className="bg-gray-300 hover:bg-gray-400 text-black px-6 py-2 rounded-md text-sm transition"
+              >
                 Cancel
               </button>
             </>
           ) : (
             <button
               onClick={handleEditToggle}
-              className="bg-blue-500 text-white px-3 py-1"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md text-sm transition"
             >
               Edit
             </button>

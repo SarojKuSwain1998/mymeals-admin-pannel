@@ -33,7 +33,7 @@ const ComplaintPage = () => {
   };
 
   return (
-    <section className="w-full min-h-screen bg-gray-50 text-gray-800">
+    <section className="w-full min-h-screen bg-lime-500 text-gray-800">
       {/* Hero Section */}
       <div className="px-4 pt-10 pb-6 md:px-20 lg:px-40">
         <h1 className="text-4xl font-bold mb-4">We're Here to Help</h1>
