@@ -9,7 +9,7 @@ import UsersPage from "./components/Pages/UsersPage";
 import HomePage from "./components/Pages/HomePage";
 import MealsPage from "./components/Pages/MealsPage";
 import AddMealsPage from "./components/Pages/AddMealsPage";
-import LoginPage from "./components/Pages/LoginPage";
+// import LoginPage from "./components/Pages/LoginPage";
 import ViewOrdersPage from "./components/Pages/ViewOrdersPage";
 // import { Sidebar, User } from "lucide-react";
 import UserRegister from "./components/Pages/Users/UserRegister";
@@ -34,6 +34,7 @@ import RenewalForm from "./components/Forms/RenewalForm";
 import UpdateContactForm from "./components/Forms/UpdateContactForm";
 import ChangeDeliveryLocationForm from "./components/Forms/ChangeDeliveryLocationForm.JSX";
 import ComplaintForm from "./components/Forms/ComplaintForm";
+import LoginPage from "./components/Pages/Admin/LoginPage";
 
 function LayoutWithNavbar() {
   const location = useLocation();
@@ -61,7 +62,7 @@ function LayoutWithNavbar() {
           <Route path="/meals" element={<MealsPage />} />
           <Route path="/add-meals" element={<AddMealsPage />} />
           <Route path="/orders" element={<ViewOrdersPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin/login" element={<LoginPage />} />
           <Route path="/user-list" element={<UserLists />} />
           <Route path="/add-teams" element={<AddTeams />} />
           <Route path="/payment-page" element={<PaymentPage />} />
