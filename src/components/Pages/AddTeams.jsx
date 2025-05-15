@@ -23,7 +23,7 @@ const AddTeams = () => {
 
   return (
     <Box className="w-full px-4 pt-4 md:px-16 lg:px-32">
-      <a href="/teams" className="flex mb-4">
+      <a href="/admin/teams" className="flex mb-4">
         <ChevronLeft />
         <span> Back</span>
       </a>

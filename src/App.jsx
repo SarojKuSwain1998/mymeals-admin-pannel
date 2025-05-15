@@ -58,27 +58,28 @@ function LayoutWithNavbar() {
       >
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/users" element={<UsersPage />} />
-          <Route path="/meals" element={<MealsPage />} />
-          <Route path="/add-meals" element={<AddMealsPage />} />
-          <Route path="/orders" element={<ViewOrdersPage />} />
+          <Route path="/admin/users" element={<UsersPage />} />
+          <Route path="/admin/meals" element={<MealsPage />} />
+          <Route path="/admin/add-meals" element={<AddMealsPage />} />
+          <Route path="/admin/orders" element={<ViewOrdersPage />} />
           <Route path="/admin/login" element={<LoginPage />} />
-          <Route path="/user-list" element={<UserLists />} />
-          <Route path="/add-teams" element={<AddTeams />} />
-          <Route path="/payment-page" element={<PaymentPage />} />
-          <Route path="/purchase" element={<PurchasePage />} />
-          <Route path="/inventory" element={<InventoryPage />} />
-          <Route path="/form-list" element={<FormListPage />} />
+          <Route path="/admin/user-list" element={<UserLists />} />
+          <Route path="/admin/add-teams" element={<AddTeams />} />
+          <Route path="/admin/payment-page" element={<PaymentPage />} />
+          <Route path="/admin/purchase" element={<PurchasePage />} />
+          <Route path="/admin/inventory" element={<InventoryPage />} />
+          <Route path="/admin/form-list" element={<FormListPage />} />
           <Route path="/pauseandresume" element={<PauseAndResumeForm />} />
           <Route path="/renewal" element={<RenewalForm />} />
           <Route path="/update-contact" element={<UpdateContactForm />} />
+          <Route path="/complaint-form" element={<ComplaintForm />} />
           <Route path="/complaint-form" element={<ComplaintForm />} />
           <Route
             path="/change-delivery-location"
             element={<ChangeDeliveryLocationForm />}
           />
-          <Route path="/teams" element={<TeamsPage />} />
-          <Route path="/template" element={<NotificationForm />} />
+          <Route path="/admin/teams" element={<TeamsPage />} />
+          <Route path="/admin/template" element={<NotificationForm />} />
           <Route path="/user/user-register" element={<UserRegister />} />
           <Route path="/user/schedule-meals" element={<Mealschedule />} />
           <Route path="/user/compaintpage" element={<ComplaintPage />} />

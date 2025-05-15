@@ -28,7 +28,7 @@ export default function ChangeDeliveryLocationForm() {
   return (
     <div className="w-full px-4 pt-2 md:px-20 lg:px-40">
       <div>
-        <a href="/form-list" className="flex mb-4">
+        <a href="/admin/form-list" className="flex mb-4">
           <ChevronLeft />
           <span> Back</span>
         </a>

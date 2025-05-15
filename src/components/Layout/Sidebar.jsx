@@ -59,7 +59,7 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <ul className="space-y-4">
+      <ul className="flex-1 overflow-y-auto px-4 space-y-4">
         <li className="flex items-center space-x-2 px-3 py-2 hover:bg-gray-400 bg-gray-300 rounded-md border">
           <LayoutDashboard className="text-gray-700" />
           <a href="/" className="hover:text-gray-600  text-gray-800">
@@ -83,7 +83,7 @@ const Sidebar = () => {
             <ul className="pl-4 text-gray-800 space-y-3">
               <li>
                 <a
-                  href="/users"
+                  href="/admin/users"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Users Reports
@@ -91,7 +91,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/user-list"
+                  href="/admin/user-list"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   User-List
@@ -99,7 +99,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/teams"
+                  href="/admin/teams"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Teams
@@ -107,7 +107,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/inventory"
+                  href="/admin/inventory"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Inventory
@@ -115,7 +115,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/purchase"
+                  href="/admin/purchase"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Purchase
@@ -123,7 +123,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/meals"
+                  href="/admin/meals"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Meals Page
@@ -131,7 +131,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/form-list"
+                  href="/admin/form-list"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Form-Lists
@@ -139,7 +139,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/add-meals"
+                  href="/admin/add-meals"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Add Meals
@@ -147,7 +147,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/orders"
+                  href="/admin/orders"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   View Orders
@@ -155,7 +155,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/payment-page"
+                  href="/admin/payment-page"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Payment-Page
@@ -163,7 +163,7 @@ const Sidebar = () => {
               </li>
               <li>
                 <a
-                  href="/template"
+                  href="/admin/template"
                   className="block py-1 hover:underline dark:text-white hover:text-black transition duration-300 ease-in-out"
                 >
                   Notification

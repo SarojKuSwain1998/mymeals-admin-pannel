@@ -102,7 +102,7 @@ const TeamsPage = () => {
       <div className="w-full px-4 pt-2 md:px-20 lg:px-40">
         <div className="flex py-4 justify-between">
           <h1 className="text-3xl ">Employee Lists</h1>
-          <a href="/add-teams">
+          <a href="/admin/add-teams">
             <button className="border hover:bg-gray-600   text-white bg-black px-4 py-2 rounded-md">
               Add Teams{" "}
             </button>
