@@ -40,12 +40,13 @@ const Sidebar = () => {
 
   return (
     // <aside className="h-screen w-64 bg-white p-8   text-black fixed">
-    <aside className="h-screen w-64 bg-white dark:bg-gray-900 p-8 text-black dark:text-white fixed">
+    <aside className="fixed h-screen w-64 bg-white dark:bg-gray-900 text-black dark:text-white flex flex-col">
       {/* <div className="flex items-center mb-8">
         <img src="./images/logo.png" alt="Logo" className="w-16 h-16 mr-2" />
         <span className="text-xl font-semibold">MyMeals</span>
       </div> */}
-      <div className="flex items-center mb-8 justify-between">
+      <div className="flex items-center mb-4 justify-between px-4 pt-4">
+        {" "}
         <div className="flex items-center">
           <img
             src={"./images/logo.png" || "../images/logo.png"}

@@ -73,7 +73,7 @@ function LayoutWithNavbar() {
           <Route path="/renewal" element={<RenewalForm />} />
           <Route path="/update-contact" element={<UpdateContactForm />} />
           <Route path="/complaint-form" element={<ComplaintForm />} />
-          <Route path="/complaint-form" element={<ComplaintForm />} />
+
           <Route
             path="/change-delivery-location"
             element={<ChangeDeliveryLocationForm />}
