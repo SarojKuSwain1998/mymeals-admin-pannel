@@ -46,29 +46,23 @@ function LayoutWithNavbar() {
         } bg-blue-50 text-black dark:bg-black dark:text-white`}
       >
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/users" element={<UsersPage />} />
-          <Route path="/meals" element={<MealsPage />} />
-          <Route path="/add-meals" element={<AddMealsPage />} />
-          <Route path="/orders" element={<ViewOrdersPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/user-list" element={<UserLists />} />
-          <Route path="/add-teams" element={<AddTeams />} />
+          <Route path={"/"} element={<HomePage />} />
+          <Route path={"/users"} element={<UsersPage />} />
+          <Route path={"/meals"} element={<MealsPage />} />
+          <Route path={"/add-meals"} element={<AddMealsPage />} />
+          <Route path={"/orders"} element={<ViewOrdersPage />} />
+          <Route path={"/login"} element={<LoginPage />} />
+          <Route path={"/user-list"} element={<UserLists />} />
+          <Route path={"/add-teams"} element={<AddTeams />} />
 
-          <Route path="/teams" element={<TeamsPage />} />
-          <Route path="/template" element={<NotificationForm />} />
-          <Route path="/user/user-register" element={<UserRegister />} />
-          <Route path="/user/schedule-meals" element={<Mealschedule />} />
-          <Route path="/user/compaintpage" element={<ComplaintPage />} />
-          <Route
-            path="/user/delivery-tracking"
-            element={<DeliveryTracking />}
-          />
-          <Route path="/delivery/assign-orders" element={<AssignOrder />} />
-          <Route
-            path="/delivery/delivery-history"
-            element={<DeliveryHistory />}
-          />
+          <Route path={"/teams"} element={<TeamsPage />} />
+          <Route path={"/template"} element={<NotificationForm />} />
+          <Route path={"/user/user-register"} element={<UserRegister />} />
+          <Route path={"/user/schedule-meals"} element={<Mealschedule />} />
+          <Route path={"/user/compaintpage"} element={<ComplaintPage />} />
+          <Route path={"/user/delivery-tracking"} element={<DeliveryTracking />} />
+          <Route path={"/delivery/assign-orders"} element={<AssignOrder />} />
+          <Route path={"/delivery/delivery-history"} element={<DeliveryHistory />} />
         </Routes>
       </div>
     </div>
